@@ -1,0 +1,21 @@
+hash: 6cace62aa81c96cb43572f082098f8062ca9c3326cf02d65100fafefc77843da
+updated: 2017-04-03T07:43:03.336244431+01:00
+imports:
+- name: github.com/golang/mock
+  version: bd3c8e81be01eef76d4b503f5e687d2d1354d2d9
+  subpackages:
+  - gomock
+- name: github.com/sirupsen/logrus
+  version: 10f801ebc38b33738c9d17d50860f484a0988ff5
+- name: github.com/smartystreets/goconvey
+  version: 3bd662eac601ad6436e64776af2e112069eb2edc
+- name: golang.org/x/net
+  version: 9773060888fba93b172cedcd70127db1ab739bd1
+  subpackages:
+  - html
+  - html/atom
+- name: golang.org/x/sys
+  version: 478fcf54317e52ab69f40bb4c7a1520288d7f7ea
+  subpackages:
+  - unix
+testImports: []

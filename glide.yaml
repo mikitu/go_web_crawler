@@ -1,0 +1,8 @@
+package: github.com/mikitu/go_web_crawler
+import:
+- package: golang.org/x/net
+  subpackages:
+  - html
+- package: github.com/sirupsen/logrus
+- package: github.com/smartystreets/goconvey
+
