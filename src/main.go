@@ -18,7 +18,7 @@ func main() {
 
 	cr := crawler.NewCrawler(options)
 	cr.Run(*url, 5)
-	for url, _ := range cr.GetStorage().GetAll() {
+	for url := range cr.GetStorage().GetAll() {
 		log.Info(url)
 	}
 }

@@ -39,7 +39,7 @@ func (p DefaultParser) Parse(body *bytes.Buffer, ch chan interface{}, stop chan 
 			}
 			is_valid, _url := p.validator.Validate(_url)
 			if  is_valid {
-				ch <- map[string]string{"type" : "url", "url" : _url}
+				ch <- _url
 			}
 		}
 	}
