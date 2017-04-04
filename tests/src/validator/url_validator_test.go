@@ -10,7 +10,6 @@ func TestValidateUrl(t *testing.T) {
 	base_url := "http://golangweekly.com"
 	v := validator.NewUrlValidator(base_url)
 
-	// Only pass t into top-level Convey calls
 	Convey("Given an url", t, func() {
 		Convey("When url is invalid", func() {
 			_url := "invalid://Url"

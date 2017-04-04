@@ -42,11 +42,11 @@ func (v UrlValidator) isAnchor() bool  {
 }
 
 func (v UrlValidator) isEmail() bool  {
-	return strings.Index(v.url.Path, "mailto:") == 0
+	return v.url.Scheme == "mailto"
 }
 
 func (v UrlValidator) isTel() bool  {
-	return strings.Index(v.url.Path, "tel:") == 0
+	return v.url.Scheme == "tel"
 }
 
 func (v UrlValidator) isValidPath() bool  {
