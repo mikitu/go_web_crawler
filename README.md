@@ -14,7 +14,36 @@ Dependencies are managed with [glide](https://github.com/Masterminds/glide)
 
     go get -v github.com/Masterminds/glide
     glide install
+    
+#### Build
+A Makefile is provided for easy build the binaries for
 
+    make help
+    
+    build:   Build binaries and docker image
+    dev:   Generates the binaries for development environment
+
+
+    make dev
+	- generate binaries ./bin/example1 ./bin/example2 ./bin/example3
+
+    make build
+	- generate binaries for deployment ./deploy/example1 ./deploy/example2 ./deploy/example3 and Docker image
+
+#### Run containers
+
+    docker run -it --entrypoint /web_crawler/example1 go-web-crawler-example  -url=https://golangweekly.com
+    
+    docker run -it --entrypoint /web_crawler/example2 go-web-crawler-example
+    
+    docker run -it --entrypoint /web_crawler/example3 go-web-crawler-example
+    
+Killing a container (if SIGINT signal doesn't work):
+
+    docker ps
+    docker kill <container_id>
+    
+    
 #### Examples (./src/examples)
 
 Default example (src/main.go) is using crawler defaults:
