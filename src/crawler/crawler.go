@@ -7,6 +7,9 @@ import (
 	"github.com/mikitu/go_web_crawler/src/fetcher"
 	"github.com/mikitu/go_web_crawler/src/validator"
 	log "github.com/sirupsen/logrus"
+	"os"
+	"os/signal"
+	"syscall"
 )
 
 type Crawler struct {
@@ -48,6 +51,14 @@ func (c *Crawler) init () {
 	}
 	c.ch = make(chan interface{}, 10)
 	c.stop = make(chan bool)
+
+	ch := make(chan os.Signal, 2)
+	signal.Notify(ch, os.Interrupt, syscall.SIGTERM)
+	go func(){
+		<-ch
+		log.Warn("Kil signal has been received")
+		os.Exit(1)
+	}()
 }
 
 func (c *Crawler) setupDefaultParser() {
