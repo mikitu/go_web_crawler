@@ -16,7 +16,7 @@ Dependencies are managed with [glide](https://github.com/Masterminds/glide)
     glide install
 
 #### Build
-A Makefile is provided for easy build the binaries for
+A Makefile is provided for easy build the binaries
 
     make help
 
