@@ -2,4 +2,9 @@ language: go
 go:
   - 1.6
 
-script: go test -v ./tests/...
+install:
+  - go get -v github.com/Masterminds/glide
+  - glide install
+
+script:
+  - go test -v ./tests/...
